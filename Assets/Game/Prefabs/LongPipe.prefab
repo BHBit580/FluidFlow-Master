@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 3920784382247990604}
   - component: {fileID: 2714499648099621147}
   - component: {fileID: 4509801337713425127}
-  m_Layer: 0
+  - component: {fileID: 977805640438990139}
+  - component: {fileID: -2064947826792120587}
+  - component: {fileID: 2054289177357994631}
+  m_Layer: 7
   m_Name: LongPipe
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6, y: 11.1, z: -0.9784517}
-  m_LocalScale: {x: 5, y: 8, z: 1}
+  m_LocalScale: {x: 10, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: de73b31c0d0d64546ac8d3a35e93cae3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f7a0500d6928d9f48843146739bf0ea5, type: 3}
+  m_Color: {r: 0.6792453, g: 0.66258454, b: 0.66258454, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -176,3 +179,95 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07713607, y: 2.19}
   m_EdgeRadius: 0
+--- !u!60 &977805640438990139
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137883740485956300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.02, y: 2.19}
+    newSize: {x: 1.02, y: 2.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.51, y: 1.095}
+      - {x: -0.51, y: -1.095}
+      - {x: 0.51, y: -1.095}
+      - {x: 0.51, y: 1.095}
+  m_UseDelaunayMesh: 0
+--- !u!114 &-2064947826792120587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137883740485956300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbfd516181d988489cb5419fdf83303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 90
+  rotationSpeed: 1
+--- !u!114 &2054289177357994631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137883740485956300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -2064947826792120587}
+          m_TargetAssemblyTypeName: RotatePipe, Assembly-CSharp
+          m_MethodName: Rotate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

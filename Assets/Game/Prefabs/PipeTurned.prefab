@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 6487635911890304207}
   - component: {fileID: 3040657478853181127}
   - component: {fileID: 8181147374735942475}
+  - component: {fileID: -1251705540240549014}
+  - component: {fileID: 5169823766149542657}
+  - component: {fileID: 58226356885931704}
   m_Layer: 0
   m_Name: PipeTurned
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,3 +215,107 @@ PolygonCollider2D:
       - {x: -0.14397305, y: -0.559765}
       - {x: -0.12055564, y: -0.43682498}
   m_UseDelaunayMesh: 0
+--- !u!114 &-1251705540240549014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969646367888075281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbfd516181d988489cb5419fdf83303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 90
+  rotationSpeed: 1
+--- !u!60 &5169823766149542657
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969646367888075281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.61}
+    newSize: {x: 1.6, y: 1.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.65, y: 0.095}
+      - {x: 0.63, y: 0.145}
+      - {x: 0.59999996, y: 0.295}
+      - {x: 0.28, y: 0.615}
+      - {x: 0.07, y: 0.685}
+      - {x: -0.22999999, y: 0.745}
+      - {x: -0.51, y: 0.805}
+      - {x: -0.79999995, y: 0.805}
+      - {x: -0.79999995, y: -0.225}
+      - {x: -0.55, y: -0.235}
+      - {x: -0.37, y: -0.16499999}
+      - {x: -0.21, y: -0.385}
+      - {x: -0.26, y: -0.805}
+      - {x: 0.79999995, y: -0.805}
+      - {x: 0.79999995, y: -0.505}
+      - {x: 0.72999996, y: -0.125}
+  m_UseDelaunayMesh: 0
+--- !u!114 &58226356885931704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969646367888075281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -1251705540240549014}
+          m_TargetAssemblyTypeName: RotatePipe, Assembly-CSharp
+          m_MethodName: Rotate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
