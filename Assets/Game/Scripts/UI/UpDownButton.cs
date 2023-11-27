@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class UpDownButton : MonoBehaviour , IPointerUpHandler , IPointerDownHandler
-{
-    [SerializeField] private CameraMovement cameraMovement;
+{ 
+    [SerializeField] private CameraManager cameraManager;
     [SerializeField] private float speed = 1f;
     private bool buttonPressed;
 
@@ -24,7 +25,7 @@ public class UpDownButton : MonoBehaviour , IPointerUpHandler , IPointerDownHand
     {
         if (buttonPressed)
         {
-            cameraMovement.MoveCamera(new Vector3(0 , speed , 0));
+            cameraManager.MoveCamera(new Vector3(0 , speed , 0));
         }
     }
 }
