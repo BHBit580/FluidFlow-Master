@@ -7,8 +7,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float minY, maxY;
     [SerializeField] private float smoothTime = 0.125f;
     [SerializeField] private float upTime = 0.5f;
-    [SerializeField] private float downTime = 0.5f;
-
+    
+    
     [SerializeField] private VoidEventChannelSO onCountDownFinished;
     [SerializeField] private GameObject water;
     
@@ -46,18 +46,11 @@ public class CameraMovement : MonoBehaviour
 
         transform.position = targetPosition;
         
-        
         //when camera reaches the top, it will activate the water particle system
         water.SetActive(true);
-        Invoke(nameof(MoveCameraToTheBottom), 1.5f);
+        
     }
+
     
-    private void MoveCameraToTheBottom()
-    {
-        Vector3 targetPosition = new Vector3(transform.position.x, minY, transform.position.z);
-        StartCoroutine(SmoothMoveToTop(targetPosition, downTime));
-    }
-
-
     private void OnDisable() => onCountDownFinished.UnregisterListener(MoveCameraToTheTop);
 }
