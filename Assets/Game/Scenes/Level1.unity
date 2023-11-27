@@ -111218,7 +111218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -111790,6 +111790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelFinished: {fileID: 11400000, guid: 7fdb4e82e1f423346a7499b29cee08fb, type: 2}
+  bucket: {fileID: 1809149297}
+  gameOverText: {fileID: 1306848723}
 --- !u!1001 &903352160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112290,7 +112292,7 @@ MonoBehaviour:
   smoothTime: 0.125
   upTime: 0.35
   downSpeed: 2
-  downMovingDelay: 2
+  downMovingDelay: 1
   startSimulation: {fileID: 11400000, guid: 7ee9dbc01230b5a44b2a289d1add3f44, type: 2}
 --- !u!850595691 &1145989617
 LightingSettings:
@@ -112566,7 +112568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME OVER
+  m_text: Game Over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -112850,7 +112852,7 @@ PrefabInstance:
       addedObject: {fileID: 1809149293}
     - targetCorrespondingSourceObject: {fileID: 8319579914244728259, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1809149292}
+      addedObject: {fileID: 1809149297}
   m_SourcePrefab: {fileID: 100100000, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
 --- !u!1 &1572175229
 GameObject:
@@ -113251,20 +113253,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8319579914244728259, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
   m_PrefabInstance: {fileID: 1564634895}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1809149292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809149288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0489b0c791c742b17688d352621d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 3
-  levelFinished: {fileID: 11400000, guid: 7fdb4e82e1f423346a7499b29cee08fb, type: 2}
 --- !u!60 &1809149293
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -113416,6 +113404,19 @@ PolygonCollider2D:
       - {x: -1.05, y: -0.57}
       - {x: -1.0699999, y: -0.56}
   m_UseDelaunayMesh: 0
+--- !u!114 &1809149297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809149288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f05b7c1fbb8b4418b1eced26e88d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterAmount: 0
 --- !u!1 &1812813735
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,8 @@ public class CountDownTimer : MonoBehaviour
             currentTime -= Time.deltaTime;
             yield return null;
         }
-        
+
+        uiText.text = null;
         levelFinished.RaiseEvent();
     }
     
