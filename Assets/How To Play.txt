@@ -1,0 +1,9 @@
+The game logic is simple 
+
+Water will instantiate from the top when you press start simulation button 
+
+You can change the rotation of pipes by clicking on it 
+
+There are some pipes which have blockers you can remove them by clicking on it 
+
+For more info you can watch this video ----- https://youtu.be/HKFjDjZLfiE?si=Ks_Gj_8VSfhLXhxh
