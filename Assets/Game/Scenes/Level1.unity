@@ -112211,7 +112211,7 @@ Transform:
   m_GameObject: {fileID: 1065981916}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 2.5, z: -10}
+  m_LocalPosition: {x: 1.8, y: -24.18, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -112754,7 +112754,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394809343}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -112901,12 +112901,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1064818631}
     m_Modifications:
     - target: {fileID: 2932957032223552310, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932957032223552310, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932957032223552310, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.502014
       objectReference: {fileID: 0}
     - target: {fileID: 2932957032223552310, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -43.36
+      value: -40.8
       objectReference: {fileID: 0}
     - target: {fileID: 2932957032223552310, guid: 34a1b398985f9f74fbe693eebb8f36c1, type: 3}
       propertyPath: m_LocalPosition.z

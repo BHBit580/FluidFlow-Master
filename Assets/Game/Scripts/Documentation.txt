@@ -1,0 +1,34 @@
+Water Mechanics Logic ----
+
+Our logic of water is plain simple but in a very tricky way and contains many shading effects. 
+The logic is -- Our water consists of several small ball shaped blue color particles which individually have rigidbodies on them.
+ 
+Our main camera will not render the water instead water will be render by another camera called as CameraFluid.
+There is a Quad called as Fluid VisualQuad this quad will be rendered by CameraFluid.
+The fluid visual quad has a material called as FluidVisual. This material has a shader called as FluidShader.
+This shader will make the water particles balls in a very dissolve way and will create a sense like water is flowing.
+Then the shader is applied on the FluidVisual material and the material is applied on the FluidVisualQuad.
+Hence the FluidVisualQuad is continuously rendering the water and then this quad will be seen by CameraFluid camera .
+Hence after that our water will look like actual water.
+
+
+Pipe Rotation Logic ----
+There are some pipes which can be rotated by about 90 degree when player touches then the logic is simple when player 
+touches the pipe then the pipe will rotate by 90 degree . I have used coroutine instead of update function for this purpose. 
+When player touches the pipe then the coroutine will be started and the pipe will rotate by 90 degree.
+
+UI LOGIC -----
+
+There are UI buttons like Up button and down button these buttons will be used to move our main camera up and down. 
+
+When player click on start simulation button then this button will raise an event called as start simulation event.
+This event will be listened and executed by water spawner script. 
+When water spawner script will receive this event then it will start spawning water particles.
+
+There is also a countdown timer when our start simulation event is fired when the timer is zero then another event will be fired called as level finished event.
+Then this level finished event will be listened by GameOverUI script and then our GameOverUI parent will turn on all it's children and
+ then the gameover UI will be displayed
+
+This gameOver UI will also get the noofwater particles hit by the bucket and after that it will display of water is filled or game is over 
+There are 2 buttons reply and next level buttons.
+When player clicks on reply button then the current level will be replayed and when player clicks on next level button then the next level will be loaded.
